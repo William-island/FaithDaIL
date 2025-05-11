@@ -1,0 +1,65 @@
+# experiment parameters
+log_dir: ./logs/
+model_dir: ./models/
+#seed: 0
+train_steps: 30_000 #70_000
+eval_period: 500
+n_eval_episodes: 5
+max_episode_steps: 3000
+load_step: 0 # step of model to load (if needed)
+
+# network parameters
+hidden_dim: 512
+n_hidden: 2
+batch_size: 128    # 256
+value_lr: 1.0e-4
+#weight_decay: 1.0e-5 # 1.0e-5
+layer_norm: False
+use_tanh: True # use tanh for policy output
+deterministic: False # use deterministic policy
+
+# ODICE parameters
+f_name: Pearson_chi_square
+discount: 0.99
+normalize: False # use data normalization
+use_twin_v: True
+Lambda: 0.4
+eta: 1.0
+type: orthogonal_true_g
+beta: 0.005
+
+
+# metadrive parameters
+# obs_dim: 259
+# act_dim: 2
+
+# carla parameters
+features_dim: 257 # 256+1, only for the carla
+
+# HITL parameters
+balance_sample: True
+online: True
+num_extra_policy: 2
+
+
+# update parameters
+train_freq: 256 # 1024 # 256
+# gradient_steps: 1
+# buffer parameters
+buffer_size: 256
+human_buffer_size: 30_000
+sub_buffer_size:  30_000 # must same as train_freq
+
+# update_choice: "uncertainty_only_human"  # "uncertainty_only_human" / "balanced" / "only_human" / "online_init_v"
+
+
+# ODICE_ISW parameters
+disc_lr: 1.0e-4
+epoch_disc: 200
+policy_lr: 1.0e-4
+epoch_policy: 200
+
+len_loss: 20
+
+
+policy_algo: 'odice'
