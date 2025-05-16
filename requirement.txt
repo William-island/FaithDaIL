@@ -1,0 +1,9 @@
+metadrive==0.2.5
+carla==0.9.10
+torch>=1.10
+numpy
+gym
+evdev; sys_platform == "linux"
+DI-engine==0.2.2
+torchvision
+markupsafe==2.0.1
