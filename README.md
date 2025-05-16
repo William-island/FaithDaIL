@@ -17,6 +17,30 @@ Install dependencies with:
 pip install -r requirements.txt
 ```
 
+
+## Installation
+
+We recommend using `conda` to manage environments.
+
+### MetaDrive
+```bash
+pip install metadrive==0.2.5
+pip install -e .
+```
+### CARLA
+```bash
+wget https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.10.1.tar.gz
+tar -xf CARLA_0.9.10.1.tar.gz
+
+# Set environment variables (adjust path as needed)
+export CARLA_ROOT=~/CARLA_0.9.10.1
+export PYTHONPATH="$CARLA_ROOT/PythonAPI/carla:$CARLA_ROOT/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg:$PYTHONPATH"
+
+# Install dependencies
+pip install DI-engine==0.2.2 markupsafe==2.0.1
+```
+
+
 ## Usage
 
 To run the main experiments:
