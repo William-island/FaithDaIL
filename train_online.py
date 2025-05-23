@@ -30,14 +30,14 @@ def main(args):
 
 if __name__ == '__main__':
     ## choose algo
-    algo = 'online_drm_odice_isw'   # 'online_drm_odice_isw_wob'
+    algo = 'FaithDaIL'  
     env_name = "metadrive" # "metadrive" or "carla"
 
     ## make args
     from argparse import ArgumentParser
     parser = ArgumentParser()
     parser.add_argument('--env_name', type=str, default=env_name, choices=["metadrive", "carla"])
-    parser.add_argument('--algo', type=str, choices=['online_drm_odice_isw']\
+    parser.add_argument('--algo', type=str, choices=['FaithDaIL']\
                         , default=algo)
     
     with open(f"./configs/{env_name}_configs/configs_{algo}.yaml", "r") as file:

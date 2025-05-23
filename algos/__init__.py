@@ -1,10 +1,10 @@
-from .online_drm_odice_isw import ONLINE_DRM_ODICE_ISW
+from .FaithDaIL import FaithDaIL
 
 
 
 def ALGO(args, env=None):
-    if args.algo == 'online_drm_odice_isw':
-        print("Using online_drm_odice_isw_wob!!")
-        return ONLINE_DRM_ODICE_ISW(args, env)
+    if args.algo == 'FaithDaIL':
+        print("Using FaithDaIL!!")
+        return FaithDaIL(args, env)
     else:
         raise ValueError(f"Invalid algorithm: {args.algo}")

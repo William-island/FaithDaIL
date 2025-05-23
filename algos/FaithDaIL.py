@@ -23,7 +23,7 @@ np.random.seed(81)
 
 
 
-class ONLINE_DRM_ODICE_ISW(nn.Module):
+class FaithDaIL(nn.Module):
     def __init__(self, args, env):
         super().__init__()
 

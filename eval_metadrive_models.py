@@ -77,7 +77,7 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument('--env_name', type=str, default="metadrive", choices=["metadrive", "carla"])
     
-    with open("./configs/metadrive_configs/configs_online_drm_odice_isw.yaml", "r") as file:
+    with open("./configs/metadrive_configs/configs_FaithDaIL.yaml", "r") as file:
         config = yaml.safe_load(file)
     now = time.strftime("%Y%m%d_%H%M%S", time.localtime())
     args = parser.parse_args(namespace=argparse.Namespace(**config))

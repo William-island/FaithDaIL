@@ -110,7 +110,7 @@ if __name__ == "__main__":
     parser.add_argument("-s","--start_order",  type=int, required=True, help="The start index of the model.")
     parser.add_argument("-e", "--end_order",  type=int, required=True, help="The end index of the model.")
     
-    with open(f"./configs/carla_configs/configs_online_drm_odice_isw_wob.yaml", "r") as file:
+    with open(f"./configs/carla_configs/configs_FaithDaIL.yaml", "r") as file:
         config = yaml.safe_load(file)
     args = parser.parse_args(namespace=argparse.Namespace(**config))
 
