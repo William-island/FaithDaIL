@@ -33,7 +33,7 @@ To set up the environment, we recommend using a Conda virtual environment:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your_username>/FaithDaIL.git
+git clone https://github.com/William-island/FaithDaIL.git
 cd FaithDaIL
 
 # 2. Install dependencies
