@@ -8,7 +8,7 @@
 
 Welcome to the official repository for the **NeurIPS 2025** paper **"Faithful Dynamic Imitation Learning from Human Intervention with Dynamic Regret Minimization"**.
 
-This repository contains the core implementations of our proposed **FaithDaIL** algorithm, along with baseline methods (BC, ODICE) and training pipelines for highly complex autonomous driving simulators (**CARLA** & **MetaDrive**).
+This repository contains the core implementations of our proposed **FaithDaIL** algorithm and training pipelines for highly complex autonomous driving simulators (**CARLA** & **MetaDrive**).
 
 ---
 
@@ -16,7 +16,7 @@ This repository contains the core implementations of our proposed **FaithDaIL** 
 
 ```text
 FaithDaIL/
-├── algos/                  # Algorithm implementations (FaithDaIL, BC, ODICE)
+├── algos/                  # Algorithm implementations
 ├── configs/                # Hyperparameter configurations for Carla and MetaDrive
 ├── envs/                   # Environment wrappers (MetaDrive & CARLA + DI-drive core)
 ├── networks/               # Neural network architectures (Policy, Value, Discriminators)
@@ -44,13 +44,7 @@ pip install -r requirement.txt
 
 ## 🚀 Quick Start
 
-### 1. Data Collection
-To collect human demonstration or intervention data:
-```bash
-python collect_human_data.py --env_name metadrive
-```
-
-### 2. Training
+### 1. Training
 You can start training models with the provided configuration files. The main script automatically loads parameters from `configs/`.
 
 ```bash
@@ -61,7 +55,7 @@ python train_online.py --env_name metadrive --algo FaithDaIL
 python train_online.py --env_name carla --algo FaithDaIL
 ```
 
-### 3. Evaluation
+### 2. Evaluation
 After training, evaluate your trained models using the evaluation scripts:
 ```bash
 python eval_metadrive_models.py 
@@ -74,11 +68,10 @@ python eval_carla_models.py
 If you find this code or our paper useful in your research, please consider citing:
 
 ```bibtex
-@inproceedings{faithdail2025,
+@inproceedings{lingfaithful,
   title={Faithful Dynamic Imitation Learning from Human Intervention with Dynamic Regret Minimization},
-  author={Your Name and Co-authors},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
-  year={2025}
+  author={Ling, Bo and Gan, Zhengyu and Wang, Wanyuan and Gao, Guanyu and Wu, Weiwei and Lyu, Yan},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
 }
 ```
 
